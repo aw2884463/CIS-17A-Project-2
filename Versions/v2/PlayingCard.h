@@ -8,24 +8,11 @@ using namespace std;
 
 class PlayingCard
 {
-private:
+protected:
     int rank;
+private:
     char suit;
 public:
-    
-    //Operator Overloads
-    bool operator<(const PlayingCard& card1, const PlayingCard& card2)
-    { 
-        return card1.rank < card2.rank; 
-    }
-    bool operator>(const PlayingCard& card1, const PlayingCard& card2)
-    { 
-        return card1.rank > card2.rank; 
-    }
-    bool operator==(const PlayingCard& card1, const PlayingCard& card2)
-    { 
-        return card1.rank == card2.rank; 
-    } 
     
     // Constructors
     PlayingCard();
@@ -42,6 +29,7 @@ public:
     //Methods
     void printCard();
     string cardToString();
+    
 };
 
 #endif /* PLAYINGCARD_H */

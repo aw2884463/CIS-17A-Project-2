@@ -7,6 +7,7 @@
 
 
 #include "PlayingCard.h"    // Playing card class
+#include "PlayerHand.h"
 
 #include <cstdlib>          // Standard library
 #include <ctime>            // Time Library
@@ -25,14 +26,21 @@ void startGame();
 
 int main() {
     
-    PlayingCard testCard;
+    PlayerHand testCard;
+    PlayerHand testCard2;
+    bool test;
     
-    testCard.setRank(12);
+    testCard.setRank(4);
     testCard.setSuit('H');
-    
+    testCard2.setRank(3);
+    testCard2.setSuit('H');
     testCard.printCard();
+    cout << endl;
+    testCard2.printCard();
+    cout << endl;
+    test = testCard > testCard2;
+    cout << test;
     
-
     return 0;
 }
 
