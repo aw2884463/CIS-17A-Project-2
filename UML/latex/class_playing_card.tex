@@ -1,0 +1,182 @@
+\hypertarget{class_playing_card}{}\doxysection{Playing\+Card Class Reference}
+\label{class_playing_card}\index{PlayingCard@{PlayingCard}}
+
+
+{\ttfamily \#include $<$Playing\+Card.\+h$>$}
+
+Inheritance diagram for Playing\+Card\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_playing_card}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_playing_card_aeb018cd950797f9b227929c991ec825d}{Playing\+Card}} ()
+\begin{DoxyCompactList}\small\item\em Constructors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_playing_card_a2462c6335dbab44093e3908f119c7f0e}{Playing\+Card}} (int init\+Rank, char init\+Suit)
+\begin{DoxyCompactList}\small\item\em Constructors. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_playing_card_ae39354b6d6ea44653f4383d37efe1839}{get\+Rank}} ()
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_playing_card_ab6eba50a66799a2bcae2efea1fbd74ce}{get\+Suit}} ()
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_playing_card_ab40506df9f8b707aaded86649f999d8a}{set\+Rank}} (int init\+Rank)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_playing_card_af154bb9bfc8187b8f89ec50624be4113}{set\+Suit}} (char init\+Suit)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_playing_card_a9729d5e621923ffdf52234b6e18653ee}{print\+Card}} ()
+\begin{DoxyCompactList}\small\item\em Methods. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_playing_card_a3436f9847c5dc9529b8815b756df5b1d}{card\+To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Methods. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_playing_card_a89d22b314cba55d6bdd3c22db6f4e66e}{operator=}} (const \mbox{\hyperlink{class_playing_card}{Playing\+Card}} \&card1)
+\begin{DoxyCompactList}\small\item\em Over\+Load operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_playing_card_aa59f6a6ec2a223f0bfb4051e0658b57c}{rank}}
+\begin{DoxyCompactList}\small\item\em rank Holds the rank of the card \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_playing_card_a8b7c73ed7eb21ade4443477baca91341}{suit}}
+\begin{DoxyCompactList}\small\item\em suit Holds the suit of the card \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_playing_card_aeb018cd950797f9b227929c991ec825d}\label{class_playing_card_aeb018cd950797f9b227929c991ec825d}} 
+\index{PlayingCard@{PlayingCard}!PlayingCard@{PlayingCard}}
+\index{PlayingCard@{PlayingCard}!PlayingCard@{PlayingCard}}
+\doxysubsubsection{\texorpdfstring{PlayingCard()}{PlayingCard()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Playing\+Card\+::\+Playing\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructors. 
+
+Constructor that sets the initial card value with no overloading Line 6\mbox{\Hypertarget{class_playing_card_a2462c6335dbab44093e3908f119c7f0e}\label{class_playing_card_a2462c6335dbab44093e3908f119c7f0e}} 
+\index{PlayingCard@{PlayingCard}!PlayingCard@{PlayingCard}}
+\index{PlayingCard@{PlayingCard}!PlayingCard@{PlayingCard}}
+\doxysubsubsection{\texorpdfstring{PlayingCard()}{PlayingCard()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Playing\+Card\+::\+Playing\+Card (\begin{DoxyParamCaption}\item[{int}]{init\+Rank,  }\item[{char}]{init\+Suit }\end{DoxyParamCaption})}
+
+
+
+Constructors. 
+
+Constructor that sets the initial card value through 2 parameters Line 13 
+\begin{DoxyParams}{Parameters}
+{\em init\+Rank} & Sets the rank of the card \\
+\hline
+{\em init\+Suit} & Sets the suit of the card\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_playing_card_a3436f9847c5dc9529b8815b756df5b1d}\label{class_playing_card_a3436f9847c5dc9529b8815b756df5b1d}} 
+\index{PlayingCard@{PlayingCard}!cardToString@{cardToString}}
+\index{cardToString@{cardToString}!PlayingCard@{PlayingCard}}
+\doxysubsubsection{\texorpdfstring{cardToString()}{cardToString()}}
+{\footnotesize\ttfamily string Playing\+Card\+::card\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Methods. 
+
+Uses rank and suit to convert card into a single string Line 161\mbox{\Hypertarget{class_playing_card_ae39354b6d6ea44653f4383d37efe1839}\label{class_playing_card_ae39354b6d6ea44653f4383d37efe1839}} 
+\index{PlayingCard@{PlayingCard}!getRank@{getRank}}
+\index{getRank@{getRank}!PlayingCard@{PlayingCard}}
+\doxysubsubsection{\texorpdfstring{getRank()}{getRank()}}
+{\footnotesize\ttfamily int Playing\+Card\+::get\+Rank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accessors. 
+
+Returns the rank of the card Line 46\mbox{\Hypertarget{class_playing_card_ab6eba50a66799a2bcae2efea1fbd74ce}\label{class_playing_card_ab6eba50a66799a2bcae2efea1fbd74ce}} 
+\index{PlayingCard@{PlayingCard}!getSuit@{getSuit}}
+\index{getSuit@{getSuit}!PlayingCard@{PlayingCard}}
+\doxysubsubsection{\texorpdfstring{getSuit()}{getSuit()}}
+{\footnotesize\ttfamily char Playing\+Card\+::get\+Suit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accessors. 
+
+Returns the suit of the card Line 52\mbox{\Hypertarget{class_playing_card_a89d22b314cba55d6bdd3c22db6f4e66e}\label{class_playing_card_a89d22b314cba55d6bdd3c22db6f4e66e}} 
+\index{PlayingCard@{PlayingCard}!operator=@{operator=}}
+\index{operator=@{operator=}!PlayingCard@{PlayingCard}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Playing\+Card\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_playing_card}{Playing\+Card}} \&}]{card1 }\end{DoxyParamCaption})}
+
+
+
+Over\+Load operator. 
+
+Sets this card equal to the second card Line 229\mbox{\Hypertarget{class_playing_card_a9729d5e621923ffdf52234b6e18653ee}\label{class_playing_card_a9729d5e621923ffdf52234b6e18653ee}} 
+\index{PlayingCard@{PlayingCard}!printCard@{printCard}}
+\index{printCard@{printCard}!PlayingCard@{PlayingCard}}
+\doxysubsubsection{\texorpdfstring{printCard()}{printCard()}}
+{\footnotesize\ttfamily void Playing\+Card\+::print\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Methods. 
+
+\mbox{\Hypertarget{class_playing_card_ab40506df9f8b707aaded86649f999d8a}\label{class_playing_card_ab40506df9f8b707aaded86649f999d8a}} 
+\index{PlayingCard@{PlayingCard}!setRank@{setRank}}
+\index{setRank@{setRank}!PlayingCard@{PlayingCard}}
+\doxysubsubsection{\texorpdfstring{setRank()}{setRank()}}
+{\footnotesize\ttfamily void Playing\+Card\+::set\+Rank (\begin{DoxyParamCaption}\item[{int}]{init\+Rank }\end{DoxyParamCaption})}
+
+
+
+Mutators. 
+
+Sets the ranks of the card Line 59 
+\begin{DoxyParams}{Parameters}
+{\em init\+Rank} & Determines what rank to set the card\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_playing_card_af154bb9bfc8187b8f89ec50624be4113}\label{class_playing_card_af154bb9bfc8187b8f89ec50624be4113}} 
+\index{PlayingCard@{PlayingCard}!setSuit@{setSuit}}
+\index{setSuit@{setSuit}!PlayingCard@{PlayingCard}}
+\doxysubsubsection{\texorpdfstring{setSuit()}{setSuit()}}
+{\footnotesize\ttfamily void Playing\+Card\+::set\+Suit (\begin{DoxyParamCaption}\item[{char}]{init\+Suit }\end{DoxyParamCaption})}
+
+
+
+Mutators. 
+
+Sets the suit of the card Line 69 
+\begin{DoxyParams}{Parameters}
+{\em init\+Suit} & Determines what suit to set the card\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_playing_card_aa59f6a6ec2a223f0bfb4051e0658b57c}\label{class_playing_card_aa59f6a6ec2a223f0bfb4051e0658b57c}} 
+\index{PlayingCard@{PlayingCard}!rank@{rank}}
+\index{rank@{rank}!PlayingCard@{PlayingCard}}
+\doxysubsubsection{\texorpdfstring{rank}{rank}}
+{\footnotesize\ttfamily int Playing\+Card\+::rank\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+rank Holds the rank of the card 
+
+\mbox{\Hypertarget{class_playing_card_a8b7c73ed7eb21ade4443477baca91341}\label{class_playing_card_a8b7c73ed7eb21ade4443477baca91341}} 
+\index{PlayingCard@{PlayingCard}!suit@{suit}}
+\index{suit@{suit}!PlayingCard@{PlayingCard}}
+\doxysubsubsection{\texorpdfstring{suit}{suit}}
+{\footnotesize\ttfamily char Playing\+Card\+::suit\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+suit Holds the suit of the card 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_playing_card_8h}{Playing\+Card.\+h}}\item 
+\mbox{\hyperlink{_playing_card_8cpp}{Playing\+Card.\+cpp}}\end{DoxyCompactItemize}

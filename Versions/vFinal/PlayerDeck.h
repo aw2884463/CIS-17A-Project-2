@@ -30,8 +30,6 @@ class PlayerDeck: public ValidCard {
         PlayerDeck();
         void printCardP(int index);
         ///Mutators
-        void addCard(ValidCard card);
-        ///Mutators
         void addTotal(int value);
         ///Mutators
         void addCard(ValidCard card);

@@ -9,9 +9,12 @@ CardDeck::CardDeck() {
     stat = false;
     cards = new ValidCard[52];
     rankC = 1;
+    
+    //Loops through all cards in the deck
     for(int i = 0;i < 52;i++) { 
-        
+        //Sets card value to not used
         cards[i].setUsed(stat);
+        //Suit of hearts
         if(i < 13) {
             cards[i].setSuit('H');
             cards[i].setRank(rankC);
@@ -20,6 +23,7 @@ CardDeck::CardDeck() {
                 rankC = 1;
             }
         }
+        //Suit of spades
         else if(i < 26 && i > 12) {
             cards[i].setSuit('S');
             cards[i].setRank(rankC);
@@ -28,6 +32,7 @@ CardDeck::CardDeck() {
                 rankC = 1;
             }
         }
+        //Suit of clubs
          else if(i < 39 && i > 25) {
             cards[i].setSuit('C');
             cards[i].setRank(rankC);
@@ -36,6 +41,7 @@ CardDeck::CardDeck() {
                 rankC = 1;
             }
         }
+        //Suit of diamonds
          else {
             cards[i].setSuit('D');
             cards[i].setRank(rankC);
@@ -47,10 +53,18 @@ CardDeck::CardDeck() {
     }  
 }
 
+CardDeck::~CardDeck()
+{
+    resetDeck();
+    delete[] cards;
+}
+
 void CardDeck::printDeck() {
-    
+    //Loops through all cards
     for(int i =0;i < 52;i++) {
+        //Runs the method to print the card value
         cards[i].printCard();
+        //Sets if the card has been used or not
         stat = cards[i].getUsed();
         switch(stat)
         {
@@ -67,9 +81,11 @@ void CardDeck::printDeck() {
 }
 
 void CardDeck::shuffle(int nTimes) {
-    
+    ///Random function
+    /// @param nTimes How many times the card will be shuffled
     srand(static_cast<unsigned int>(time(0)));
     nCards = 52;
+    //Shuffles the cards nTimes
     for(int i = 0 ;i < nTimes;i++) {
         for(int j = 0;j < nCards;j++) {
             val = rand() % nCards;
@@ -79,25 +95,30 @@ void CardDeck::shuffle(int nTimes) {
     }   
 }
 
+
 void CardDeck::rmCard(int index) {
-    
+    ///Sets a cards as used
+    ///@param index Index what card to set as used
     cards[index].setUsed(true);
 }
 
 void CardDeck::rpCard(int index) {
     
+    ///Sets a cards as used
+    ///@param index Index what card to set as used
     cards[index].setUsed(false);
 }
 
 ValidCard CardDeck::getCard(int index) {
-    
+    ///Gets a cards at index
+    ///@param index Index what card to set as used
    return cards[index];
 }
 
 void CardDeck::resetDeck() {
-    
+    ///Resets all the cars in the deck
     for(int i = 0;i < 52;i++) {
-        
+        ///Runs replace card method
         rpCard(i);
     }
 }

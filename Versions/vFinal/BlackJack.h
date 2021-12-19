@@ -37,6 +37,8 @@ public:
     
     //Constructor
     BlackJack();
+    //Destructor
+    ~BlackJack();
     
     //Starts Game
     void startGame();
@@ -50,13 +52,9 @@ public:
     
     //Accessor
     void printTotals(int index);
-    //Accessor
     void printHand(int index);
-    //Accessor
     void lastChecks();
-    //Accessor
     void check4bj();
-    //Accessor
     void check4bust();
     
 };

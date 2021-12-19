@@ -1,0 +1,121 @@
+\hypertarget{class_card_deck}{}\doxysection{Card\+Deck Class Reference}
+\label{class_card_deck}\index{CardDeck@{CardDeck}}
+
+
+{\ttfamily \#include $<$Card\+Deck.\+h$>$}
+
+Inheritance diagram for Card\+Deck\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_card_deck}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_card_deck_a9441ddfb082fac27bdf2f08bb70a241d}{Card\+Deck}} ()
+\item 
+void \mbox{\hyperlink{class_card_deck_aaabda137683c9ccc30e96d782f82e540}{shuffle}} (int \mbox{\hyperlink{class_card_deck_af4a185dbec6e0657e92e8fddf929c372}{n\+Times}})
+\item 
+void \mbox{\hyperlink{class_card_deck_a41d060c13d441ea1c16fd2ac251bcb3e}{rm\+Card}} (int index)
+\item 
+void \mbox{\hyperlink{class_card_deck_a4d53721819a2f58eb28e3875ce4ee6e0}{rp\+Card}} (int index)
+\item 
+\mbox{\hyperlink{class_valid_card}{Valid\+Card}} \mbox{\hyperlink{class_card_deck_a06a103069d726bd03c2c7bd79cf26a0f}{get\+Card}} (int index)
+\item 
+void \mbox{\hyperlink{class_card_deck_a64f82d83cb92ee88a64f550f5d8474ed}{print\+Deck}} ()
+\item 
+void \mbox{\hyperlink{class_card_deck_aa0e0d5075114fa1fa057a45c11502682}{reset\+Deck}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_valid_card}{Valid\+Card}} $\ast$ \mbox{\hyperlink{class_card_deck_a81a29d69f4cbeccb6e068f2c99f2284c}{cards}}
+\item 
+bool \mbox{\hyperlink{class_card_deck_a428831ce6bd2eb439fffac8e451d17bb}{stat}}
+\item 
+int \mbox{\hyperlink{class_card_deck_ac307e68b527b6ca7d80fe030468a6b2b}{n\+Cards}}
+\item 
+int \mbox{\hyperlink{class_card_deck_af4a185dbec6e0657e92e8fddf929c372}{n\+Times}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_card_deck_a9441ddfb082fac27bdf2f08bb70a241d}\label{class_card_deck_a9441ddfb082fac27bdf2f08bb70a241d}} 
+\index{CardDeck@{CardDeck}!CardDeck@{CardDeck}}
+\index{CardDeck@{CardDeck}!CardDeck@{CardDeck}}
+\doxysubsubsection{\texorpdfstring{CardDeck()}{CardDeck()}}
+{\footnotesize\ttfamily Card\+Deck\+::\+Card\+Deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_card_deck_a06a103069d726bd03c2c7bd79cf26a0f}\label{class_card_deck_a06a103069d726bd03c2c7bd79cf26a0f}} 
+\index{CardDeck@{CardDeck}!getCard@{getCard}}
+\index{getCard@{getCard}!CardDeck@{CardDeck}}
+\doxysubsubsection{\texorpdfstring{getCard()}{getCard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_valid_card}{Valid\+Card}} Card\+Deck\+::get\+Card (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_deck_a64f82d83cb92ee88a64f550f5d8474ed}\label{class_card_deck_a64f82d83cb92ee88a64f550f5d8474ed}} 
+\index{CardDeck@{CardDeck}!printDeck@{printDeck}}
+\index{printDeck@{printDeck}!CardDeck@{CardDeck}}
+\doxysubsubsection{\texorpdfstring{printDeck()}{printDeck()}}
+{\footnotesize\ttfamily void Card\+Deck\+::print\+Deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_deck_aa0e0d5075114fa1fa057a45c11502682}\label{class_card_deck_aa0e0d5075114fa1fa057a45c11502682}} 
+\index{CardDeck@{CardDeck}!resetDeck@{resetDeck}}
+\index{resetDeck@{resetDeck}!CardDeck@{CardDeck}}
+\doxysubsubsection{\texorpdfstring{resetDeck()}{resetDeck()}}
+{\footnotesize\ttfamily void Card\+Deck\+::reset\+Deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_deck_a41d060c13d441ea1c16fd2ac251bcb3e}\label{class_card_deck_a41d060c13d441ea1c16fd2ac251bcb3e}} 
+\index{CardDeck@{CardDeck}!rmCard@{rmCard}}
+\index{rmCard@{rmCard}!CardDeck@{CardDeck}}
+\doxysubsubsection{\texorpdfstring{rmCard()}{rmCard()}}
+{\footnotesize\ttfamily void Card\+Deck\+::rm\+Card (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_deck_a4d53721819a2f58eb28e3875ce4ee6e0}\label{class_card_deck_a4d53721819a2f58eb28e3875ce4ee6e0}} 
+\index{CardDeck@{CardDeck}!rpCard@{rpCard}}
+\index{rpCard@{rpCard}!CardDeck@{CardDeck}}
+\doxysubsubsection{\texorpdfstring{rpCard()}{rpCard()}}
+{\footnotesize\ttfamily void Card\+Deck\+::rp\+Card (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_deck_aaabda137683c9ccc30e96d782f82e540}\label{class_card_deck_aaabda137683c9ccc30e96d782f82e540}} 
+\index{CardDeck@{CardDeck}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!CardDeck@{CardDeck}}
+\doxysubsubsection{\texorpdfstring{shuffle()}{shuffle()}}
+{\footnotesize\ttfamily void Card\+Deck\+::shuffle (\begin{DoxyParamCaption}\item[{int}]{n\+Times }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_card_deck_a81a29d69f4cbeccb6e068f2c99f2284c}\label{class_card_deck_a81a29d69f4cbeccb6e068f2c99f2284c}} 
+\index{CardDeck@{CardDeck}!cards@{cards}}
+\index{cards@{cards}!CardDeck@{CardDeck}}
+\doxysubsubsection{\texorpdfstring{cards}{cards}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_valid_card}{Valid\+Card}}$\ast$ Card\+Deck\+::cards\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_card_deck_ac307e68b527b6ca7d80fe030468a6b2b}\label{class_card_deck_ac307e68b527b6ca7d80fe030468a6b2b}} 
+\index{CardDeck@{CardDeck}!nCards@{nCards}}
+\index{nCards@{nCards}!CardDeck@{CardDeck}}
+\doxysubsubsection{\texorpdfstring{nCards}{nCards}}
+{\footnotesize\ttfamily int Card\+Deck\+::n\+Cards\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_card_deck_af4a185dbec6e0657e92e8fddf929c372}\label{class_card_deck_af4a185dbec6e0657e92e8fddf929c372}} 
+\index{CardDeck@{CardDeck}!nTimes@{nTimes}}
+\index{nTimes@{nTimes}!CardDeck@{CardDeck}}
+\doxysubsubsection{\texorpdfstring{nTimes}{nTimes}}
+{\footnotesize\ttfamily int Card\+Deck\+::n\+Times\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_card_deck_a428831ce6bd2eb439fffac8e451d17bb}\label{class_card_deck_a428831ce6bd2eb439fffac8e451d17bb}} 
+\index{CardDeck@{CardDeck}!stat@{stat}}
+\index{stat@{stat}!CardDeck@{CardDeck}}
+\doxysubsubsection{\texorpdfstring{stat}{stat}}
+{\footnotesize\ttfamily bool Card\+Deck\+::stat\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_card_deck_8h}{Card\+Deck.\+h}}\item 
+\mbox{\hyperlink{_card_deck_8cpp}{Card\+Deck.\+cpp}}\end{DoxyCompactItemize}

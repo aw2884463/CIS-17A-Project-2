@@ -8,15 +8,20 @@
 
 BlackJack::BlackJack() {
     
-    pCount = 0;/// @param pCount Player Count
-    sCount = 0;/// @param sCount Shuffle Count
-    BJ = false;/// @param BJ Black Jack status
-    deckIndex = 0;/// @param deckIndex what card to get from deck
-    hitStand = 99;/// @param hitStand if the player wants to hit or stand
+    pCount = 0;//pCount Player Count
+    sCount = 0;//sCount Shuffle Count
+    BJ = false;//BJ Black Jack status
+    deckIndex = 0;//deckIndex what card to get from deck
+    hitStand = 99;//hitStand if the player wants to hit or stand
     winner,winnerTotal = -1;
-    /// @param winner Stores winner index
-    /// @param winnerTotal Stores winner hand value
+    //winner Stores winner index
+    //winnerTotal Stores winner hand value
     
+}
+
+BlackJack::~BlackJack() {
+   // Deallocate the memory that was previously reserved
+   delete[] players;
 }
 
 
@@ -26,28 +31,28 @@ void BlackJack::startGame() {
     cin >> pCount;
     cout << "How many times would you like the deck shuffled(MAX = 20):";
     cin >> sCount;
-    /// @see CardDeck::shuffle() Shuffles all the cards in the deck x amount of times
+    //CardDeck::shuffle() Shuffles all the cards in the deck x amount of times
     deck.shuffle(sCount);
     pCount = pCount + 1;
     players = new PlayerDeck[pCount];
-    /// @see dealInitial Deals the initial cards to all players
+    //dealInitial Deals the initial cards to all players
     dealInitial();
-    /// @see check4bj Checks each players hand for BlackJack
+    //check4bj Checks each players hand for BlackJack
     check4bj();
     if(BJ == false) {
         for(int i = 0;i < pCount;i++) {
-            ///@see addTotal() Adds the value of the card to the players total
+            //addTotal() Adds the value of the card to the players total
             addTotal(i); 
         }
         
         cout << endl << "---Totals---" << endl;
         for(int i = 0;i < pCount;i++) {
-            /// @see printTotals() Prints total of player
+            //printTotals() Prints total of player
             printTotals(i);
         }  
-        /// @see ask4hit() Runs through all players ask to hit or stand
+        //ask4hit() Runs through all players ask to hit or stand
         ask4hit();
-        /// @see lastChecks() Runs through all finishes the game also picks winner
+        //lastChecks() Runs through all finishes the game also picks winner
         lastChecks();
         
     }
@@ -66,9 +71,9 @@ void BlackJack::dealInitial() {
         else {
         cout << "Player " << i << " has these cards." << endl;
         }
-        ///Sets all players bust status to false Line 69
+        //Sets all players bust status to false
         bustIndex.push_back(false);
-        ///Gives all players 2 cards Line 71
+        //Gives all players 2 cards Line 71
         for(int j = 0; j < 2;j++) {
             
             tempCard = deck.getCard(deckIndex);
@@ -84,7 +89,7 @@ void BlackJack::dealInitial() {
             }
             
         }
-        /// @see printHand() Prints cards in players hand
+        //printHand() Prints cards in players hand
         printHand(i);
     }
     
@@ -92,15 +97,15 @@ void BlackJack::dealInitial() {
 
 void BlackJack::ask4hit() {
     
-    ///Cycles through all players Line 95
+    //Cycles through all players
     for(int i = pCount - 1;i > -1;i--) {
-        hitStand = 99;///Resets hitStand Line 97
-        ///Checks for dealer Line 98
+        hitStand = 99;///Resets hitStand
+        //Checks for dealer
         if(i == 0) {
-            ///Makes sure the dealer hasn't bust and has less than 16 in value Line 100
+            //Makes sure the dealer hasn't bust and has less than 16 in value
             if(players[i].getTotal() < 16 && bustIndex.at(i) == false) {
                 
-                ///Forces dealer to hit if they have less than 16 Line 103
+                //Forces dealer to hit if they have less than 16
                 while(players[i].getTotal() < 16) {
                     tempCard = deck.getCard(deckIndex);
                     deckIndex++;
@@ -109,27 +114,27 @@ void BlackJack::ask4hit() {
                     cout << "Updated Total:" << endl;
                     printTotals(i);
                 }
-                ///Ends game if dealer goes over 21 Line 112
+                //Ends game if dealer goes over 21
                 if(players[i].getTotal() > 21) {
                     
                     cout << "Dealer has gone over 21 and busted all players win" << endl;
-                    return 0;
+                    return;
                 }
             }
         }
         else {
            
-            ///Checks that player hasn't gone over 21 Line 122
+            //Checks that player hasn't gone over 21
             if(bustIndex.at(i) != true) {
                 
-                ///While the player hasn't decided stand run this Line 125
+                //While the player hasn't decided stand run this
                while(hitStand != 2) {
                     cout << "Player " << i << " would you like to hit or stand" << endl;
                     cout << "Enter 1) to hit 2) to stand :";            
                     cin >> hitStand;
                     
                 switch(hitStand) {
-                    ///Runs if player wants to hit Line 132
+                    //Runs if player wants to hit
                     case 1: 
                         cout << "You decided to hit you now have" << endl;
                         tempCard = deck.getCard(deckIndex);
@@ -146,14 +151,14 @@ void BlackJack::ask4hit() {
                             hitStand = 2;
                         }
                         break;
-                        ///Runs if player wants to stand Line 149
+                        //Runs if player wants to stand
                     case 2:
                         cout << "You decided to stand" << endl;
                         break;
-                        ///Runs if player entered and invalid number Line 153
+                        //Runs if player entered and invalid number
                     default:
                         cout << "Invalid Input" << endl;
-                        return 0;
+                        return;
                         break;
                     }
                }    
@@ -164,18 +169,18 @@ void BlackJack::ask4hit() {
 
 void BlackJack::lastChecks() {
     
-    ///Adds all players that haven't bust to possible winner vector Line 167
+    //Adds all players that haven't bust to possible winner vector
     for(int i = 0;i < pCount;i++) {
         
         if(bustIndex.at(i) != true) {  
             posWinR.push_back(i);
         }
     }
-    ///Cycles through all possible winners and finds person with highest hand Line 174
+    //Cycles through all possible winners and finds person with highest hand
     for(int i = 0;i < posWinR.size();i++) {
         
         cout << posWinR.at(i) << endl; 
-        ///Makes sure value isn't over 21 Line 178
+        //Makes sure value isn't over 21
         if(players[posWinR.at(i)].getTotal() > winnerTotal && players[posWinR.at(i)].getTotal() <= 21) {
             
            winnerTotal = players[posWinR.at(i)].getTotal();
@@ -183,7 +188,7 @@ void BlackJack::lastChecks() {
         }
         
     }
-    ///Checks if winner is the dealer Line 186
+    //Checks if winner is the dealer
     if(winner == 0) {
         
         cout << "The dealer has won the game with " << winnerTotal << "!!!" << endl;
@@ -198,7 +203,7 @@ void BlackJack::lastChecks() {
 }
 
 void BlackJack::printHand(int index) {
-        ///Loops through all cards and prints them Line 200
+        //Loops through all cards and prints them
         for(int j = 0;j < players[index].deckSize();j++) {
             
             players[index].printCardP(j);
@@ -208,17 +213,17 @@ void BlackJack::printHand(int index) {
 
 void BlackJack::check4bj() {
     
-    ///Loops through all players hand Line 211
+    //Loops through all players hand
     for(int i = 0;i < pCount;i++) {
             
-        ///Stores first 2 cards in temp Variables Line 214
+        //Stores first 2 cards in temp Variables
             tempCard = players[i].getCard(0);
             tempCard2 = players[i].getCard(1);
             
-            ///Checks for 1 variation of blackjack Line 218
+            //Checks for 1 variation of blackjack
             if(tempCard.getRank() == 1 && tempCard2.getRank() == 11) {
                 
-                ///Checks for dealer Line 221
+                //Checks for dealer
                 if(i == 0) {
                     
                     cout << endl << "Dealer Won the game with blackjack!!!" << endl;
@@ -234,10 +239,10 @@ void BlackJack::check4bj() {
                 }
                 
             }
-            ///Checks for another variation of black jack Line 237
+            //Checks for another variation of black jack
             else if (tempCard.getRank() == 11 && tempCard2.getRank() == 1) {
                 
-                ///Checks for dealer
+                //Checks for dealer
                 if(i == 0) {
                     
                     cout << endl << "Dealer Won the game with blackjack!!!" << endl;
@@ -255,7 +260,7 @@ void BlackJack::check4bj() {
             }
             else {
                 
-                ///Checks for dealer Line 258
+                //Checks for dealer
                 if(i == 0) {
                     
                     cout << endl << "No blackjacks were found in the dealers hand" << endl;
@@ -277,19 +282,19 @@ void BlackJack::check4bj() {
 void BlackJack::addTotal(int i) {
     
         players[i].setTotal(0);
-        ///sets player total too 0 Line 280
+        //sets player total too 0
         for(int j = 0;j < players[i].deckSize();j++) {
             
             tempCard = players[i].getCard(j);
-            ///Stores the card in a temp variable to manipulate Line 284
+            //Stores the card in a temp variable to manipulate
             if(tempCard.getRank() < 11 && tempCard.getRank() > 1) {
-                ///Adds the value of the card to the players total Line 286
+                //Adds the value of the card to the players total
                 players[i].addTotal(tempCard.getRank());
             }
-            ///Checks if card is an Ace Line 289
+            //Checks if card is an Ace
             else if (tempCard.getRank() == 1) {
                 
-                ///Checks if player asking is the dealer Line 292
+                //Checks if player asking is the dealer
                 if(i == 0) {
                     
                     switch(rand() % 2) {
@@ -314,7 +319,7 @@ void BlackJack::addTotal(int i) {
                 }
                 else {
                     
-                    ///Ask the user what they want the ace to count as Line 317
+                    //Ask the user what they want the ace to count as
                     cout << endl << "Player " << i << " do you want your ace";
                     cout << endl << "to count as 11 or 1" << endl;
                     cout << "Enter 1) for 11 and 2) for 1 :";
@@ -342,7 +347,7 @@ void BlackJack::addTotal(int i) {
                 }
             }
             else {
-                ///If card is a face card just add 10 Line 345
+                //If card is a face card just add 10
                 players[i].addTotal(10);
             }
             
@@ -353,9 +358,9 @@ void BlackJack::printTotals(int index) {
     
         
         tempTotal = players[index].getTotal();
-        ///Stores the player at index hand value in tempvalue Line 356
+        //Stores the player at index hand value in tempvalue
         
-        ///Checks if the player is the dealer Line 358
+        //Checks if the player is the dealer
         if(index == 0) {
             
             

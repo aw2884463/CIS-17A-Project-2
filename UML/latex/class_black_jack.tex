@@ -1,0 +1,192 @@
+\hypertarget{class_black_jack}{}\doxysection{Black\+Jack Class Reference}
+\label{class_black_jack}\index{BlackJack@{BlackJack}}
+
+
+{\ttfamily \#include $<$Black\+Jack.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_black_jack_a83500b8f60661b16f2a0c3959acdaa74}{Black\+Jack}} ()
+\item 
+void \mbox{\hyperlink{class_black_jack_ad57f562f003f3c30b0ff3607c7e6a537}{start\+Game}} ()
+\item 
+void \mbox{\hyperlink{class_black_jack_a08e1ee7d433a2f6247e93ebd4132f484}{add\+Total}} (int i)
+\item 
+void \mbox{\hyperlink{class_black_jack_acfc0e2407d304247181a9e18cefc7133}{ask4hit}} ()
+\item 
+void \mbox{\hyperlink{class_black_jack_ab305d4500b4c5b55333322acb1c10fdd}{deal\+Initial}} ()
+\item 
+void \mbox{\hyperlink{class_black_jack_a48e4855d5e3bf56fa57c689a029c453a}{print\+Totals}} (int index)
+\item 
+void \mbox{\hyperlink{class_black_jack_a7da182962c7b8c32a807e68633e5eca8}{print\+Hand}} (int index)
+\item 
+void \mbox{\hyperlink{class_black_jack_a55a0c8b9f2732cab16f7ac25e6561f73}{last\+Checks}} ()
+\item 
+void \mbox{\hyperlink{class_black_jack_a6497ebbe93d47885fb6ef126f723a09e}{check4bj}} ()
+\item 
+void \mbox{\hyperlink{class_black_jack_aad813c56b9abdf3d3271819b39839f00}{check4bust}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_black_jack_a83500b8f60661b16f2a0c3959acdaa74}\label{class_black_jack_a83500b8f60661b16f2a0c3959acdaa74}} 
+\index{BlackJack@{BlackJack}!BlackJack@{BlackJack}}
+\index{BlackJack@{BlackJack}!BlackJack@{BlackJack}}
+\doxysubsubsection{\texorpdfstring{BlackJack()}{BlackJack()}}
+{\footnotesize\ttfamily Black\+Jack\+::\+Black\+Jack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Count} & Player Count\\
+\hline
+{\em s\+Count} & Shuffle Count\\
+\hline
+{\em BJ} & Black Jack status\\
+\hline
+{\em deck\+Index} & what card to get from deck\\
+\hline
+{\em hit\+Stand} & if the player wants to hit or stand\\
+\hline
+{\em winner} & Stores winner index \\
+\hline
+{\em winner\+Total} & Stores winner hand value\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_black_jack_a08e1ee7d433a2f6247e93ebd4132f484}\label{class_black_jack_a08e1ee7d433a2f6247e93ebd4132f484}} 
+\index{BlackJack@{BlackJack}!addTotal@{addTotal}}
+\index{addTotal@{addTotal}!BlackJack@{BlackJack}}
+\doxysubsubsection{\texorpdfstring{addTotal()}{addTotal()}}
+{\footnotesize\ttfamily void Black\+Jack\+::add\+Total (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+sets player total too 0 Line 280
+
+Stores the card in a temp variable to manipulate Line 284
+
+Adds the value of the card to the players total Line 286
+
+Checks if card is an Ace Line 289
+
+Checks if player asking is the dealer Line 292
+
+Ask the user what they want the ace to count as Line 317
+
+If card is a face card just add 10 Line 345\mbox{\Hypertarget{class_black_jack_acfc0e2407d304247181a9e18cefc7133}\label{class_black_jack_acfc0e2407d304247181a9e18cefc7133}} 
+\index{BlackJack@{BlackJack}!ask4hit@{ask4hit}}
+\index{ask4hit@{ask4hit}!BlackJack@{BlackJack}}
+\doxysubsubsection{\texorpdfstring{ask4hit()}{ask4hit()}}
+{\footnotesize\ttfamily void Black\+Jack\+::ask4hit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cycles through all players Line 95
+
+Resets hit\+Stand Line 97
+
+Checks for dealer Line 98
+
+Makes sure the dealer hasn\textquotesingle{}t bust and has less than 16 in value Line 100
+
+Forces dealer to hit if they have less than 16 Line 103
+
+Ends game if dealer goes over 21 Line 112
+
+Checks that player hasn\textquotesingle{}t gone over 21 Line 122
+
+While the player hasn\textquotesingle{}t decided stand run this Line 125
+
+Runs if player wants to hit Line 132
+
+Runs if player wants to stand Line 149
+
+Runs if player entered and invalid number Line 153\mbox{\Hypertarget{class_black_jack_a6497ebbe93d47885fb6ef126f723a09e}\label{class_black_jack_a6497ebbe93d47885fb6ef126f723a09e}} 
+\index{BlackJack@{BlackJack}!check4bj@{check4bj}}
+\index{check4bj@{check4bj}!BlackJack@{BlackJack}}
+\doxysubsubsection{\texorpdfstring{check4bj()}{check4bj()}}
+{\footnotesize\ttfamily void Black\+Jack\+::check4bj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Loops through all players hand Line 211
+
+Stores first 2 cards in temp Variables Line 214
+
+Checks for 1 variation of blackjack Line 218
+
+Checks for dealer Line 221
+
+Checks for another variation of black jack Line 237
+
+Checks for dealer
+
+Checks for dealer Line 258\mbox{\Hypertarget{class_black_jack_aad813c56b9abdf3d3271819b39839f00}\label{class_black_jack_aad813c56b9abdf3d3271819b39839f00}} 
+\index{BlackJack@{BlackJack}!check4bust@{check4bust}}
+\index{check4bust@{check4bust}!BlackJack@{BlackJack}}
+\doxysubsubsection{\texorpdfstring{check4bust()}{check4bust()}}
+{\footnotesize\ttfamily void Black\+Jack\+::check4bust (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_black_jack_ab305d4500b4c5b55333322acb1c10fdd}\label{class_black_jack_ab305d4500b4c5b55333322acb1c10fdd}} 
+\index{BlackJack@{BlackJack}!dealInitial@{dealInitial}}
+\index{dealInitial@{dealInitial}!BlackJack@{BlackJack}}
+\doxysubsubsection{\texorpdfstring{dealInitial()}{dealInitial()}}
+{\footnotesize\ttfamily void Black\+Jack\+::deal\+Initial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sets all players bust status to false Line 69
+
+Gives all players 2 cards Line 71
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_black_jack_a7da182962c7b8c32a807e68633e5eca8}{print\+Hand()}} Prints cards in players hand
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_black_jack_a55a0c8b9f2732cab16f7ac25e6561f73}\label{class_black_jack_a55a0c8b9f2732cab16f7ac25e6561f73}} 
+\index{BlackJack@{BlackJack}!lastChecks@{lastChecks}}
+\index{lastChecks@{lastChecks}!BlackJack@{BlackJack}}
+\doxysubsubsection{\texorpdfstring{lastChecks()}{lastChecks()}}
+{\footnotesize\ttfamily void Black\+Jack\+::last\+Checks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Adds all players that haven\textquotesingle{}t bust to possible winner vector Line 167
+
+Cycles through all possible winners and finds person with highest hand Line 174
+
+Makes sure value isn\textquotesingle{}t over 21 Line 178
+
+Checks if winner is the dealer Line 186\mbox{\Hypertarget{class_black_jack_a7da182962c7b8c32a807e68633e5eca8}\label{class_black_jack_a7da182962c7b8c32a807e68633e5eca8}} 
+\index{BlackJack@{BlackJack}!printHand@{printHand}}
+\index{printHand@{printHand}!BlackJack@{BlackJack}}
+\doxysubsubsection{\texorpdfstring{printHand()}{printHand()}}
+{\footnotesize\ttfamily void Black\+Jack\+::print\+Hand (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+Loops through all cards and prints them Line 200\mbox{\Hypertarget{class_black_jack_a48e4855d5e3bf56fa57c689a029c453a}\label{class_black_jack_a48e4855d5e3bf56fa57c689a029c453a}} 
+\index{BlackJack@{BlackJack}!printTotals@{printTotals}}
+\index{printTotals@{printTotals}!BlackJack@{BlackJack}}
+\doxysubsubsection{\texorpdfstring{printTotals()}{printTotals()}}
+{\footnotesize\ttfamily void Black\+Jack\+::print\+Totals (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+Stores the player at index hand value in tempvalue Line 356
+
+Checks if the player is the dealer Line 358\mbox{\Hypertarget{class_black_jack_ad57f562f003f3c30b0ff3607c7e6a537}\label{class_black_jack_ad57f562f003f3c30b0ff3607c7e6a537}} 
+\index{BlackJack@{BlackJack}!startGame@{startGame}}
+\index{startGame@{startGame}!BlackJack@{BlackJack}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily void Black\+Jack\+::start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_card_deck_aaabda137683c9ccc30e96d782f82e540}{Card\+Deck\+::shuffle()}} Shuffles all the cards in the deck x amount of times
+
+\mbox{\hyperlink{class_black_jack_ab305d4500b4c5b55333322acb1c10fdd}{deal\+Initial}} Deals the initial cards to all players
+
+\mbox{\hyperlink{class_black_jack_a6497ebbe93d47885fb6ef126f723a09e}{check4bj}} Checks each players hand for \mbox{\hyperlink{class_black_jack}{Black\+Jack}}
+
+\mbox{\hyperlink{class_black_jack_a08e1ee7d433a2f6247e93ebd4132f484}{add\+Total()}} Adds the value of the card to the players total
+
+\mbox{\hyperlink{class_black_jack_a48e4855d5e3bf56fa57c689a029c453a}{print\+Totals()}} Prints total of player
+
+\mbox{\hyperlink{class_black_jack_acfc0e2407d304247181a9e18cefc7133}{ask4hit()}} Runs through all players ask to hit or stand
+
+\mbox{\hyperlink{class_black_jack_a55a0c8b9f2732cab16f7ac25e6561f73}{last\+Checks()}} Runs through all finishes the game also picks winner
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_black_jack_8h}{Black\+Jack.\+h}}\item 
+\mbox{\hyperlink{_black_jack_8cpp}{Black\+Jack.\+cpp}}\end{DoxyCompactItemize}

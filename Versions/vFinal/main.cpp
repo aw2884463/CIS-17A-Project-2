@@ -4,17 +4,9 @@
  * Date:12/3/2021
  * Time:2:04PM
  */
-#include "CardDeck.h"
-#include "PlayerDeck.h"
-#include "BlackJack.h"
+//Contains all libraries in the project
+#include "header.h"
 
-#include <cstdlib>          // Standard library
-#include <ctime>            // Time Library
-#include <iostream>         // Input Output
-#include <iomanip>          // Input/Output manipulation
-#include <string>           // Getline
-#include <fstream>          // Input output file stream
-#include <array>            // Array library
 
 using namespace std;
 
@@ -29,6 +21,13 @@ int main() {
 }
 
 
+//***********************************
+// startGame 
+// Desc:
+// Simple function that creates the
+// blackjack object and starts the
+// game using a startGame method
+//***********************************
 void startGame() {
     
     BlackJack blackJack;

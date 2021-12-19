@@ -31,14 +31,23 @@ protected:
     int nTimes;
 public:
     
+    //Constructor
     CardDeck();
+    //Destructor
+    ~CardDeck();
+    
+    ///Shuffles the deck nTimes
     void shuffle(int nTimes);
     
-    
+    ///Removes the card at index in the deck
     void rmCard(int index);
+    ///Replaces the card at index in the deck
     void rpCard(int index);
+    ///Returns the card at index
     ValidCard getCard(int index);
+    ///Prints all the card in the deck
     void printDeck();
+    ///Sets all the cards in the deck as unused
     void resetDeck();
     
     

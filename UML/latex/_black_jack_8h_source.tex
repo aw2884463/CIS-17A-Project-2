@@ -1,0 +1,70 @@
+\hypertarget{_black_jack_8h_source}{}\doxysection{Black\+Jack.\+h}
+\mbox{\hyperlink{_black_jack_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-\/default.txt to change this license}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Click nbfs://nbhost/SystemFileSystem/Templates/cppFiles/file.h to edit this template}}
+\DoxyCodeLine{4 \textcolor{comment}{ */}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{/* }}
+\DoxyCodeLine{7 \textcolor{comment}{ * File:   blackjack.h}}
+\DoxyCodeLine{8 \textcolor{comment}{ * Author: Austin}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Created on December 11, 2021, 1:01 AM}}
+\DoxyCodeLine{11 \textcolor{comment}{ */}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#ifndef BLACKJACK\_H}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define BLACKJACK\_H}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_player_deck_8h}{PlayerDeck.h}}"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_card_deck_8h}{CardDeck.h}}"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_black_jack}{BlackJack}} \{}
+\DoxyCodeLine{20     }
+\DoxyCodeLine{21 \textcolor{keyword}{private}:}
+\DoxyCodeLine{22     }
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} pCount,sCount;\textcolor{comment}{//Player Count and Shuffle Count}}
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} deckIndex;\textcolor{comment}{//Determines where in the deck to pull a card from}}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_valid_card}{ValidCard}} tempCard,tempCard2;\textcolor{comment}{//Two temp cards to hold value for manipulation}}
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} tempTotal;\textcolor{comment}{//Holds the total that gets output to console}}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_card_deck}{CardDeck}} deck;\textcolor{comment}{//The deck for the game}}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_player_deck}{PlayerDeck}}* players;\textcolor{comment}{//Dynamic array of players}}
+\DoxyCodeLine{29     vector<bool> bustIndex;\textcolor{comment}{//Determines what players went over 21}}
+\DoxyCodeLine{30     vector<int> posWinR;\textcolor{comment}{//Vector of possible winners}}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} winner,winnerTotal;\textcolor{comment}{//Holds the index of winning player and the card value;}}
+\DoxyCodeLine{32     \textcolor{keywordtype}{bool} BJ,endTurn;\textcolor{comment}{//Determines if someone got blackjack and if the turn is over}}
+\DoxyCodeLine{33     \textcolor{keywordtype}{int} aceDet;\textcolor{comment}{//Determines if ace is worth 11 or 1}}
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} hitStand;\textcolor{comment}{//Determines if the player wanted to hit or stand}}
+\DoxyCodeLine{35     }
+\DoxyCodeLine{36 \textcolor{keyword}{public}:}
+\DoxyCodeLine{37     }
+\DoxyCodeLine{38     \textcolor{comment}{//Constructor}}
+\DoxyCodeLine{39     \mbox{\hyperlink{class_black_jack_a83500b8f60661b16f2a0c3959acdaa74}{BlackJack}}();}
+\DoxyCodeLine{40     }
+\DoxyCodeLine{41     \textcolor{comment}{//Starts Game}}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_black_jack_ad57f562f003f3c30b0ff3607c7e6a537}{startGame}}();}
+\DoxyCodeLine{43     }
+\DoxyCodeLine{44     \textcolor{comment}{//Mutator}}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_black_jack_a08e1ee7d433a2f6247e93ebd4132f484}{addTotal}}(\textcolor{keywordtype}{int} i);}
+\DoxyCodeLine{46     \textcolor{comment}{//Mutator}}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_black_jack_acfc0e2407d304247181a9e18cefc7133}{ask4hit}}();}
+\DoxyCodeLine{48     \textcolor{comment}{//Mutator}}
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_black_jack_ab305d4500b4c5b55333322acb1c10fdd}{dealInitial}}();}
+\DoxyCodeLine{50     }
+\DoxyCodeLine{51     \textcolor{comment}{//Accessor}}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_black_jack_a48e4855d5e3bf56fa57c689a029c453a}{printTotals}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{53     \textcolor{comment}{//Accessor}}
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_black_jack_a7da182962c7b8c32a807e68633e5eca8}{printHand}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{55     \textcolor{comment}{//Accessor}}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_black_jack_a55a0c8b9f2732cab16f7ac25e6561f73}{lastChecks}}();}
+\DoxyCodeLine{57     \textcolor{comment}{//Accessor}}
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_black_jack_a6497ebbe93d47885fb6ef126f723a09e}{check4bj}}();}
+\DoxyCodeLine{59     \textcolor{comment}{//Accessor}}
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_black_jack_aad813c56b9abdf3d3271819b39839f00}{check4bust}}();}
+\DoxyCodeLine{61     }
+\DoxyCodeLine{62 \};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* BLACKJACK\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{65 }
+
+\end{DoxyCode}

@@ -1,0 +1,41 @@
+\hypertarget{_playing_card_8h_source}{}\doxysection{Playing\+Card.\+h}
+\mbox{\hyperlink{_playing_card_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PLAYINGCARD\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PLAYINGCARD\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_playing_card}{PlayingCard}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 \textcolor{keyword}{private}:}
+\DoxyCodeLine{12     \textcolor{keywordtype}{string} rankSeg; }
+\DoxyCodeLine{13     \textcolor{keywordtype}{string} ofSeg = \textcolor{stringliteral}{"{} of "{}};}
+\DoxyCodeLine{14     \textcolor{keywordtype}{string} suitSeg; }
+\DoxyCodeLine{15     \textcolor{keywordtype}{string} cardString;}
+\DoxyCodeLine{16 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_playing_card_aa59f6a6ec2a223f0bfb4051e0658b57c}{rank}};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{char} \mbox{\hyperlink{class_playing_card_a8b7c73ed7eb21ade4443477baca91341}{suit}};}
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     }
+\DoxyCodeLine{22     \mbox{\hyperlink{class_playing_card_aeb018cd950797f9b227929c991ec825d}{PlayingCard}}();}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_playing_card_aeb018cd950797f9b227929c991ec825d}{PlayingCard}}(\textcolor{keywordtype}{int} initRank, \textcolor{keywordtype}{char} initSuit);}
+\DoxyCodeLine{25     }
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_playing_card_ae39354b6d6ea44653f4383d37efe1839}{getRank}}();}
+\DoxyCodeLine{29     \textcolor{keywordtype}{char} \mbox{\hyperlink{class_playing_card_ab6eba50a66799a2bcae2efea1fbd74ce}{getSuit}}();}
+\DoxyCodeLine{30     }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_playing_card_ab40506df9f8b707aaded86649f999d8a}{setRank}}(\textcolor{keywordtype}{int} initRank);}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_playing_card_af154bb9bfc8187b8f89ec50624be4113}{setSuit}}(\textcolor{keywordtype}{char} initSuit);}
+\DoxyCodeLine{35     }
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_playing_card_a9729d5e621923ffdf52234b6e18653ee}{printCard}}();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_playing_card_a3436f9847c5dc9529b8815b756df5b1d}{cardToString}}();}
+\DoxyCodeLine{40     }
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_playing_card_a89d22b314cba55d6bdd3c22db6f4e66e}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_playing_card}{PlayingCard}}\& card1);    }
+\DoxyCodeLine{43 \};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PLAYINGCARD\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

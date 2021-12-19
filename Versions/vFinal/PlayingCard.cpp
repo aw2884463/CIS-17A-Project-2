@@ -3,17 +3,17 @@
 
 PlayingCard::PlayingCard()
 {
-    ///Constructor that sets the initial card value with no overloading Line 6
+    //Constructor that sets the initial card value with no overloading
     rank = 1;
     suit = 'S';
 }
 
 PlayingCard::PlayingCard(int initRank, char initSuit)
 {
-    ///Constructor that sets the initial card value through 2 parameters Line 13
-    ///@param initRank Sets the rank of the card
-    ///@param initSuit Sets the suit of the card
-    if(initRank >= 1 || initRank <= 13)
+    //Constructor that sets the initial card value through 2 parameters Line 13
+    //initRank Sets the rank of the card
+    //initSuit Sets the suit of the card
+    if(initRank >= 1 && initRank <= 13)
     {   
         rank = initRank;
         switch(initSuit)
@@ -43,31 +43,31 @@ PlayingCard::PlayingCard(int initRank, char initSuit)
 //Accessors
 int PlayingCard::getRank()
 {
-    ///Returns the rank of the card Line 46
+    //Returns the rank of the card
     return rank;
 }
-
+//Accessors
 char PlayingCard::getSuit()
 {
-    ///Returns the suit of the card Line 52
+    //Returns the suit of the card
     return suit;
 }
 
 //Mutators
 void PlayingCard::setRank(int initRank)
 {
-    ///Sets the ranks of the card Line 59
-    ///@param initRank Determines what rank to set the card
+    //Sets the ranks of the card
+    //initRank Determines what rank to set the card
     if(initRank >= 1 || initRank <= 13) 
     {
         rank = initRank;
     }
 }
-
+//Mutators
 void PlayingCard::setSuit(char initSuit)
 {
-    ///Sets the suit of the card Line 69
-    ///@param initSuit Determines what suit to set the card
+    //Sets the suit of the card
+    //initSuit Determines what suit to set the card
    switch(initSuit)
     {
         case ('H'):
@@ -158,7 +158,7 @@ void PlayingCard::printCard()
 
 string PlayingCard::cardToString()
 {
-    ///Uses rank and suit to convert card into a single string Line 161
+    //Uses rank and suit to convert card into a single string
     switch(rank)
     {
         case (1):
@@ -226,7 +226,7 @@ string PlayingCard::cardToString()
 
     void PlayingCard::operator=(const PlayingCard& card1)
     {   
-        ///Sets this card equal to the second card Line 229
+        //Sets this card equal to the second card
         this->rank = card1.rank;
         this->suit = card1.suit;
     }

@@ -1,0 +1,51 @@
+\hypertarget{_player_deck_8h_source}{}\doxysection{Player\+Deck.\+h}
+\mbox{\hyperlink{_player_deck_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-\/default.txt to change this license}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Click nbfs://nbhost/SystemFileSystem/Templates/cppFiles/file.h to edit this template}}
+\DoxyCodeLine{4 \textcolor{comment}{ */}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{/* }}
+\DoxyCodeLine{7 \textcolor{comment}{ * File:   PlayerDeck.h}}
+\DoxyCodeLine{8 \textcolor{comment}{ * Author: Austin}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Created on December 9, 2021, 7:38 PM}}
+\DoxyCodeLine{11 \textcolor{comment}{ */}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#ifndef PLAYERDECK\_H}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define PLAYERDECK\_H}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_valid_card_8h}{ValidCard.h}}"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}vector"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_player_deck}{PlayerDeck}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_valid_card}{ValidCard}} \{}
+\DoxyCodeLine{20     }
+\DoxyCodeLine{21     \textcolor{keyword}{private}:}
+\DoxyCodeLine{22         \mbox{\hyperlink{class_valid_card}{ValidCard}} startCard;}
+\DoxyCodeLine{23         \textcolor{keywordtype}{int} DeckValue;}
+\DoxyCodeLine{24         vector<ValidCard> PlayerCards;\textcolor{comment}{//vector that holds all cards}}
+\DoxyCodeLine{25         \textcolor{keywordtype}{int} val,val2;\textcolor{comment}{//temp variables for rand function}}
+\DoxyCodeLine{26     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{27     \textcolor{keyword}{public}:}
+\DoxyCodeLine{28         }
+\DoxyCodeLine{30         \mbox{\hyperlink{class_player_deck_a0c04c49c3425091e1f9d0ee47a099d1f}{PlayerDeck}}();}
+\DoxyCodeLine{31         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_deck_a31fc102f4e6cdaf1903c3c51d9c03526}{printCardP}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{33         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_deck_a013536304039b00a916cf0dee5da6bc8}{addCard}}(\mbox{\hyperlink{class_valid_card}{ValidCard}} card);}
+\DoxyCodeLine{35         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_deck_af6c0b6d753d2897a239eee7843aca25c}{addTotal}}(\textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{37         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_deck_a013536304039b00a916cf0dee5da6bc8}{addCard}}(\mbox{\hyperlink{class_valid_card}{ValidCard}} card);}
+\DoxyCodeLine{39         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_deck_a3c3d3b610428a5af96a863c3a9a30dbb}{setCard}}(\mbox{\hyperlink{class_valid_card}{ValidCard}} card,\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{41         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_deck_a7895ee3dd5caff8293e7c2d712396a28}{setTotal}}(\textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{42         \textcolor{comment}{//Accessors}}
+\DoxyCodeLine{43         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_player_deck_aa27d2c34fa68e395f78b0da43a8011d5}{deckSize}}();}
+\DoxyCodeLine{45         \mbox{\hyperlink{class_valid_card}{ValidCard}} \mbox{\hyperlink{class_player_deck_aeb691320a9f5955bfbeefa9c64cc88f2}{getCard}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{47         \textcolor{keywordtype}{int}  \mbox{\hyperlink{class_player_deck_a20c6d2d9d35d352baa006bf7da5b63b7}{getTotal}}();}
+\DoxyCodeLine{48         }
+\DoxyCodeLine{49         }
+\DoxyCodeLine{50         }
+\DoxyCodeLine{51 \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PLAYERDECK\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{54 }
+
+\end{DoxyCode}

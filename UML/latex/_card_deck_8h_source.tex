@@ -1,0 +1,55 @@
+\hypertarget{_card_deck_8h_source}{}\doxysection{Card\+Deck.\+h}
+\mbox{\hyperlink{_card_deck_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-\/default.txt to change this license}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Click nbfs://nbhost/SystemFileSystem/Templates/cFiles/file.h to edit this template}}
+\DoxyCodeLine{4 \textcolor{comment}{ */}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{/* }}
+\DoxyCodeLine{7 \textcolor{comment}{ * File:   Deck.h}}
+\DoxyCodeLine{8 \textcolor{comment}{ * Author: Austin}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Created on December 7, 2021, 1:28 PM}}
+\DoxyCodeLine{11 \textcolor{comment}{ */}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#ifndef CARDDECK\_H}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define CARDDECK\_H}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_valid_card_8h}{ValidCard.h}}"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{swap_8h}{swap.h}}"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}ctime"{}}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{class_card_deck}{CardDeck}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_valid_card}{ValidCard}} \{}
+\DoxyCodeLine{22     }
+\DoxyCodeLine{23 \textcolor{keyword}{private}:}
+\DoxyCodeLine{24     }
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} rankC;}
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} val,val2;}
+\DoxyCodeLine{27 \textcolor{keyword}{protected}: }
+\DoxyCodeLine{28     \mbox{\hyperlink{class_valid_card}{ValidCard}}* \mbox{\hyperlink{class_card_deck_a81a29d69f4cbeccb6e068f2c99f2284c}{cards}};}
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_card_deck_a428831ce6bd2eb439fffac8e451d17bb}{stat}};}
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_card_deck_ac307e68b527b6ca7d80fe030468a6b2b}{nCards}};}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_card_deck_af4a185dbec6e0657e92e8fddf929c372}{nTimes}};}
+\DoxyCodeLine{32 \textcolor{keyword}{public}:}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{34     \mbox{\hyperlink{class_card_deck_a9441ddfb082fac27bdf2f08bb70a241d}{CardDeck}}();}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_card_deck_aaabda137683c9ccc30e96d782f82e540}{shuffle}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_card_deck_af4a185dbec6e0657e92e8fddf929c372}{nTimes}});}
+\DoxyCodeLine{36     }
+\DoxyCodeLine{37     }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_card_deck_a41d060c13d441ea1c16fd2ac251bcb3e}{rmCard}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_card_deck_a4d53721819a2f58eb28e3875ce4ee6e0}{rpCard}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_valid_card}{ValidCard}} \mbox{\hyperlink{class_card_deck_a06a103069d726bd03c2c7bd79cf26a0f}{getCard}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_card_deck_a64f82d83cb92ee88a64f550f5d8474ed}{printDeck}}();}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_card_deck_aa0e0d5075114fa1fa057a45c11502682}{resetDeck}}();}
+\DoxyCodeLine{43     }
+\DoxyCodeLine{44     }
+\DoxyCodeLine{45     }
+\DoxyCodeLine{46 \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* CARDDECK\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{50 }
+
+\end{DoxyCode}
