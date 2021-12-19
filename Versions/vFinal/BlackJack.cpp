@@ -29,32 +29,46 @@ void BlackJack::startGame() {
     cout << "Hello, Welcome to Austin's game of Black Jack!!!";
     cout << endl << "How many players will be playing(MAX = 11)?:";
     cin >> pCount;
-    cout << "How many times would you like the deck shuffled(MAX = 20):";
-    cin >> sCount;
-    //CardDeck::shuffle() Shuffles all the cards in the deck x amount of times
-    deck.shuffle(sCount);
-    pCount = pCount + 1;
-    players = new PlayerDeck[pCount];
-    //dealInitial Deals the initial cards to all players
-    dealInitial();
-    //check4bj Checks each players hand for BlackJack
-    check4bj();
-    if(BJ == false) {
-        for(int i = 0;i < pCount;i++) {
-            //addTotal() Adds the value of the card to the players total
-            addTotal(i); 
+    try {
+        
+        if(pCount < 11 && pCount > 0) {
+            
+            cout << "How many times would you like the deck shuffled:";
+            cin >> sCount;
+            //CardDeck::shuffle() Shuffles all the cards in the deck x amount of times
+            deck.shuffle(sCount);
+            pCount = pCount + 1;
+            players = new PlayerDeck[pCount];
+            //dealInitial Deals the initial cards to all players
+            dealInitial();
+            //check4bj Checks each players hand for BlackJack
+            check4bj();
+            if(BJ == false) {
+                for(int i = 0;i < pCount;i++) {
+                    //addTotal() Adds the value of the card to the players total
+                    addTotal(i); 
+                }
+
+                cout << endl << "---Totals---" << endl;
+                for(int i = 0;i < pCount;i++) {
+                    //printTotals() Prints total of player
+                    printTotals(i);
+                }  
+                //ask4hit() Runs through all players ask to hit or stand
+                ask4hit();
+                //lastChecks() Runs through all finishes the game also picks winner
+                if(bustIndex.at(0) == false) {
+                lastChecks();
+                }
+
+            }
+            
         }
+        else throw(pCount);
+    }
+    catch(int pCount) {
         
-        cout << endl << "---Totals---" << endl;
-        for(int i = 0;i < pCount;i++) {
-            //printTotals() Prints total of player
-            printTotals(i);
-        }  
-        //ask4hit() Runs through all players ask to hit or stand
-        ask4hit();
-        //lastChecks() Runs through all finishes the game also picks winner
-        lastChecks();
-        
+        cout << "Invalid player count" << endl;
     }
 }
 
@@ -102,8 +116,8 @@ void BlackJack::ask4hit() {
         hitStand = 99;///Resets hitStand
         //Checks for dealer
         if(i == 0) {
-            //Makes sure the dealer hasn't bust and has less than 16 in value
-            if(players[i].getTotal() < 16 && bustIndex.at(i) == false) {
+            ///Makes sure the dealer hasn't bust and has less than 16 in value
+            if(players[i].getTotal() < 15 && bustIndex.at(i) == false) {
                 
                 //Forces dealer to hit if they have less than 16
                 while(players[i].getTotal() < 16) {
@@ -118,6 +132,7 @@ void BlackJack::ask4hit() {
                 if(players[i].getTotal() > 21) {
                     
                     cout << "Dealer has gone over 21 and busted all players win" << endl;
+                    bustIndex.at(0) = true;
                     return;
                 }
             }
@@ -179,7 +194,6 @@ void BlackJack::lastChecks() {
     //Cycles through all possible winners and finds person with highest hand
     for(int i = 0;i < posWinR.size();i++) {
         
-        cout << posWinR.at(i) << endl; 
         //Makes sure value isn't over 21
         if(players[posWinR.at(i)].getTotal() > winnerTotal && players[posWinR.at(i)].getTotal() <= 21) {
             
@@ -227,16 +241,15 @@ void BlackJack::check4bj() {
                 if(i == 0) {
                     
                     cout << endl << "Dealer Won the game with blackjack!!!" << endl;
-                    BJ = true;
-                    return;
                 }
                 else {
                     
                     cout << endl << "Player " << i; 
                     cout <<   " won the game with blackjack!!!" << endl;
+
+                }
                     BJ = true;
                     return;
-                }
                 
             }
             //Checks for another variation of black jack
@@ -246,16 +259,14 @@ void BlackJack::check4bj() {
                 if(i == 0) {
                     
                     cout << endl << "Dealer Won the game with blackjack!!!" << endl;
-                    BJ = true;
-                    return;
                 }
                 else {
                     
                     cout << endl << "Player " << i; 
                     cout <<   " won the game with blackjack!!!" << endl;
+                }
                     BJ = true;
                     return;
-                }
                 
             }
             else {

@@ -81,8 +81,8 @@ void CardDeck::printDeck() {
 }
 
 void CardDeck::shuffle(int nTimes) {
-    ///Random function
-    /// @param nTimes How many times the card will be shuffled
+    //Random function
+    //nTimes How many times the card will be shuffled
     srand(static_cast<unsigned int>(time(0)));
     nCards = 52;
     //Shuffles the cards nTimes
@@ -97,26 +97,26 @@ void CardDeck::shuffle(int nTimes) {
 
 
 void CardDeck::rmCard(int index) {
-    ///Sets a cards as used
-    ///@param index Index what card to set as used
+    //Sets a cards as used
+    //index Index what card to set as used
     cards[index].setUsed(true);
 }
 
 void CardDeck::rpCard(int index) {
     
-    ///Sets a cards as used
-    ///@param index Index what card to set as used
+    //Sets a cards as used
+    //index Index what card to set as used
     cards[index].setUsed(false);
 }
 
 ValidCard CardDeck::getCard(int index) {
-    ///Gets a cards at index
-    ///@param index Index what card to set as used
+    //Gets a cards at index
+    //index Index what card to set as used
    return cards[index];
 }
 
 void CardDeck::resetDeck() {
-    ///Resets all the cars in the deck
+    //Resets all the cars in the deck
     for(int i = 0;i < 52;i++) {
         ///Runs replace card method
         rpCard(i);

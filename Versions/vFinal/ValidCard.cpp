@@ -7,7 +7,7 @@
 
 ValidCard::ValidCard()
 {
-    ///Constructor-Initializes all the  card attributes Line 10
+    //Constructor-Initializes all the  card attributes Line 10
     ValidCard::setRank(1);
     ValidCard::setSuit('S');
     ValidCard::setUsed(false);
@@ -21,8 +21,8 @@ bool ValidCard::getUsed() {
 }
 
 void ValidCard::setUsed(bool initUsed) {
-    /// This method sets cards usable status Line 24
-    ///@param initUsed Determines if card used status is set to true or false
+    // This method sets cards usable status Line 24
+    //initUsed Determines if card used status is set to true or false
     used = initUsed;
 }
 

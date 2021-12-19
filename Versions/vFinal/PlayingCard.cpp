@@ -13,7 +13,7 @@ PlayingCard::PlayingCard(int initRank, char initSuit)
     //Constructor that sets the initial card value through 2 parameters Line 13
     //initRank Sets the rank of the card
     //initSuit Sets the suit of the card
-    if(initRank >= 1 && initRank <= 13)
+    if(initRank >= 1 || initRank <= 13)
     {   
         rank = initRank;
         switch(initSuit)
